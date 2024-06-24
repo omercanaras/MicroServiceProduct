@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 @RequestMapping("api/product")
-@RestController()
+@RestController
 public class ProductController
 {
     //Serverside rendering ön yüzün render edilmesi - MVC
@@ -41,7 +40,7 @@ public class ProductController
       return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
     }
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<Product>> getAllSortByPrice()
     {
         List<Product> productList = productService.findAllByOrderByPriceDesc();
@@ -60,7 +59,7 @@ public class ProductController
 
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     public ResponseEntity<String> delete(@PathVariable("id") Integer id)
     {
       /*   Optional<Product> existingProduct = Optional.ofNullable(productService.findById(id));

@@ -2,7 +2,6 @@ package com.omercan.product_app.model.service;
 
 import com.omercan.product_app.model.entity.Product;
 
-import com.omercan.product_app.utility.Util;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +17,7 @@ public class ProductService extends AbstractProductService
         }
         catch (Exception e)
         {
-            Util.showGeneralExceptionInfo(e);
+
             return null;
         }
     }
@@ -31,7 +30,7 @@ public class ProductService extends AbstractProductService
         }
         catch (Exception e)
         {
-            Util.showGeneralExceptionInfo(e);
+
             return null;
         }
 
@@ -44,7 +43,7 @@ public class ProductService extends AbstractProductService
         }
         catch (Exception e)
         {
-            Util.showGeneralExceptionInfo(e);
+
             return null;
         }
     }
@@ -56,7 +55,7 @@ public class ProductService extends AbstractProductService
         }
         catch (IllegalArgumentException e)
         {
-            Util.showGeneralExceptionInfo(e);
+
 
         }
     }
@@ -67,7 +66,7 @@ public class ProductService extends AbstractProductService
             return productRepository.findById(ID).orElseThrow(() -> new RuntimeException("Entity is not found"));
 
         } catch (Exception e) {
-            Util.showGeneralExceptionInfo(e);
+
             return null;
         }
 
@@ -82,7 +81,7 @@ public class ProductService extends AbstractProductService
         catch(IllegalArgumentException e)
         {
 
-            Util.showGeneralExceptionInfo(e);
+
             return null;
         }
     }

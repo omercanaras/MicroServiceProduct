@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+
+//Bu iki methodu da product hem de gateway projesine
 public abstract class AbstractProductService implements  EntityService<Product, Integer> {
 
     @Autowired
