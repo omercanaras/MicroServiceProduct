@@ -55,7 +55,7 @@ public class ProductController
 
         Product foundProduct = productService.findById(id);
 
-        return foundProduct!=null ? new ResponseEntity<>(foundProduct,HttpStatus.FOUND) : new ResponseEntity<>(HttpStatus.NOT_FOUND) ;
+        return foundProduct!=null ? new ResponseEntity<>(foundProduct,HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND) ;
 
     }
 
